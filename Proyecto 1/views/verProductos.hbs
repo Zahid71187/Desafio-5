@@ -1,0 +1,21 @@
+{{#if productos }}
+    <div class="table-responsive" style="width: 100%; margin: 0;">
+        <table class="table table-dark">
+            <tr style="color: yellow;"> <th>Nombre</th> <th>Apellido</th> <th>Edad</th> </tr>
+           {{#each productos}}
+            <tr>
+                <td> {{ title }} </td>
+                <td>  {{ price }} </td>
+                <td> <img src="{{ thumbnail }}" alt=""> </td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+{{else}}
+   <h3 style="color: black">no existen datos</h3>
+{{/if}}
+
+<div style="width: 100%;display: flex;margin: 20px">
+        <button class="btn btn-secondary" style="width: 30%; margin: 0 auto; justify-content: center;align-items: center;" onclick="location.href='/'">Agregar productos</button>
+</div>
+

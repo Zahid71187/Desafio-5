@@ -1,0 +1,28 @@
+include includes/head.pug
+
+body
+
+div(class="card")
+  div(class="card-body")
+    h1(style="color:cadetblue") Agregar producto
+  div
+div
+ if exitoso
+  h3 Producto agregado con éxito
+  
+if error
+  h3 Error al agregar producto
+
+form(action="/productos" method="post")
+  div(class="mb-3" style="width: 30%; margin: 10px")
+    label(for="title" class="form-label") Title:
+    input(type="title" class="form-control" id="title" name="title")
+  div(class="mb-3" style="width: 30%; margin: 10px")
+    label(for="price" class="form-label") Price:
+    input(type="price" class="form-control" id="price" name="price")
+  div(class="mb-3" style="width: 30%; margin: 10px")
+    label(for="thumbnail" class="form-label") Thumbnail:
+    input(type="thumbnail" class="form-control" id="thumbnail" name="thumbnail")
+  button(type="submit" class="btn btn-primary" style="width: 30%; margin: 10px") Agregar
+
+button(class="btn btn-secondary" style="width: 30%; margin: 10px" onclick="location.href='/productos'") Ver productos
